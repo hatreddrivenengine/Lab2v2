@@ -1,0 +1,36 @@
+﻿<Window x:Class="Lab2v2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2v2"
+        mc:Ignorable="d"
+        Title="Labs2V2" Height="500" Width="1243.5">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Label Grid.Row="0" Margin="2">
+                <Label.Content>
+                    <Binding Path="CurrentPage">
+                        <Binding.StringFormat>Current Page: {0}</Binding.StringFormat>
+                    </Binding>
+                </Label.Content>
+            </Label>
+            <Button Content="Пред. стр" Click="OnPreviousClicked" Margin="2,6,2,76"/>
+            <Button Content="След. стр" Click="OnNextClicked" Margin="2,6,2,76"/>
+        </StackPanel>
+        <DataGrid Name ="Threat_Grid" ItemsSource="{Binding}" SelectionChanged="DataGrid_SelectionChanged" MouseDoubleClick="OpenThreatInfo" IsReadOnly="True" Margin="0,64,0,38" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="УБИ" Width="50" Binding="{Binding ThreatId,  StringFormat=УБИ {0}}"/>
+                <DataGridTextColumn Header="Название угрозы" Width="*" Binding="{Binding ThreatName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="ChangeLog" Content="Показать изменения" HorizontalAlignment="Left" Margin="680,6,0,0" VerticalAlignment="Top" Width="168" Height="34" Click="ChangeLog_Button_Click"/>
+        <Button Name="DownloadFSTEK" Content="Скачать базу  ФСТЭК" HorizontalAlignment="Left" Margin="486,6,0,0" VerticalAlignment="Top" Width="168" Height="34" Click="DownloadFSTEK_Click" ToolTip="Скачать базу УБИ с ресурса ФСТЭК и сравнить её с локальной базой" />
+    </Grid>
+</Window>

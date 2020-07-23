@@ -1,0 +1,30 @@
+﻿<Window x:Class="Lab2v2.ThreatInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2v2"
+        mc:Ignorable="d"
+        Title="ThreatInfo" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="189,32,0,0" TextWrapping="Wrap" Text="УБИ" VerticalAlignment="Top" Height="17" Width="64"/>
+        <TextBox IsReadOnly="True" Name ="ThreatID" HorizontalAlignment="Left" Height="18" Margin="216,31,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,62,0,0" TextWrapping="Wrap" Text="Наименование угрозы:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,92,0,0" TextWrapping="Wrap" Text="Описание угрозы:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,230,0,0" TextWrapping="Wrap" Text="Объект воздействия угрозы:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="340,300,0,0" TextWrapping="Wrap" Text="Нарушение" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="140,324,0,0" TextWrapping="Wrap" Text="Конфиденциальности:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="338,324,0,0" TextWrapping="Wrap" Text="Целостности:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="505,324,0,0" TextWrapping="Wrap" Text="Доступности:" VerticalAlignment="Top"/>
+        <TextBox IsReadOnly="True" Name ="ThreatCnf" HorizontalAlignment="Left" Height="21" Margin="286,323,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27" />
+        <TextBox IsReadOnly="True" Name ="ThreatIng" HorizontalAlignment="Left" Height="21" Margin="440,323,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27" />
+        <TextBox IsReadOnly="True" Name ="ThreatAvb" HorizontalAlignment="Left" Height="21" Margin="600,323,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27" />
+        <TextBox IsReadOnly="True" Name ="ThreatName" HorizontalAlignment="Left" Height="23" Margin="216,60,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="467"/>
+        <TextBox IsReadOnly="True" Name ="ThreatInf" HorizontalAlignment="Left" Height="129" Margin="216,90,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="467"/>
+        <TextBox IsReadOnly="True" Name ="ThreatObj" HorizontalAlignment="Left" Height="28" Margin="215,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="468"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,269,0,0" TextWrapping="Wrap" Text="Объект воздействия угрозы:" VerticalAlignment="Top"/>
+        <TextBox IsReadOnly="True" Name ="ThreatSource" HorizontalAlignment="Left" Height="17" Margin="215,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="468"/>
+
+
+    </Grid>
+</Window>
